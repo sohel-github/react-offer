@@ -1,38 +1,128 @@
-.App {
-  text-align: center;
+label {
+  font-weight: 600;
+  margin-left: 1px;
+  font-size: 12px;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#paynow-box {
+  position: relative;
+  background: #fff;
+  padding: 20px 30px;
+  margin-top: 50px;
+  border-radius: 3px;
+  box-shadow: 0px 1px 5px #d2cfcf;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#logo {
+  position: absolute;
+  background-color: #fff;
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  border-radius: 3px;
+  z-index: 5;
+  top: -40px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  box-shadow: 0px 1px 5px #dcdcdc;
+}
+#logo img {
+  max-width: 80px;
 }
 
-.App-link {
-  color: #61dafb;
+.com-name {
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-family: Arial;
+  color: #848484;
+  margin-top: 50px;
+  font-size: 15px;
+  font-weight: 600;
+}
+h1 {
+  position: relative;
+  text-align: center;
+  font-family: Tahoma;
+  margin-bottom: 40px;
+  color: #dd7327;
+  font-size: 20px;
+}
+h1::after {
+  position: absolute;
+  content: "";
+  background: #dd7327;
+  width: 50px;
+  height: 2px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  bottom: -14px;
+}
+.suc {
+  background: green;
+  padding: 10px;
+  color: #fff;
+  font-size: 12px;
+  border-radius: 2px;
+  font-weight: 600;
+  border: 2px solid rgb(1, 110, 1);
+}
+p {
+  padding: 0;
+  margin: 0;
+  font-family: Tahoma;
+  color: #666565;
+}
+input {
+  width: 100%;
+  border: 2px solid #d6a481;
+  padding: 10px;
+  background: #ffffff;
+}
+input:focus {
+  border: 2px solid #ca6014;
+  outline: none;
+}
+select {
+  width: 100%;
+  border: 2px solid #f7e5db;
+  background: #fffaf7;
+  padding: 10px;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+select:focus {
+  border: 2px solid #ca6014;
+  outline: none;
+}
+button {
+  background: #dd7326;
+  width: 100%;
+  color: #fff;
+  padding: 10px;
+  font-family: Arial;
+  margin-top: 10px;
+  border: 1px solid #e89050;
+  border-radius: 3px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+button:hover {
+  background: #ca6014;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.verified {
+  text-align: center;
+  font-family: Arial;
+  color: #dd7326;
+  font-size: 11px;
+  margin-top: 10px;
 }
