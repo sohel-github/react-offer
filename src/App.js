@@ -1,4 +1,8 @@
 import React, { useRef, useState, useEffect } from "react";
+import Zoom from "react-reveal/Zoom";
+import Fade from "react-reveal/Fade";
+import Flip from "react-reveal/Flip";
+import Slide from "react-reveal/Slide";
 import emailjs from "@emailjs/browser";
 import "bootstrap/dist/css/bootstrap.min.css";
 import logo from "./images/logo.png";
@@ -53,11 +57,19 @@ const App = () => {
         <div className="col-sm-3"></div>
         <div className="col-md-6 col-xs-12">
           <div id="paynow-box">
-            <div id="logo">
-              <img src={logo} alt="Walletmix Logo" />
-            </div>
-            <h3 className="com-name">Walletmix</h3>
-            <h1>Send us your information.</h1>
+            <Flip top>
+              <div id="logo">
+                <Zoom top>
+                  <img src={logo} alt="Walletmix Logo" />
+                </Zoom>
+              </div>
+            </Flip>
+            <Fade left>
+              <h3 className="com-name">Walletmix</h3>
+            </Fade>
+            <Fade right>
+              <h1>Send us your information.</h1>
+            </Fade>
 
             {loading ? <img src={load} alt="load" /> : ``}
             {successMsg ? (
@@ -95,7 +107,6 @@ const App = () => {
                   </div>
                 </div>
               </div>
-
               <div className="row">
                 <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                   <div className="form-group my-form">
@@ -104,7 +115,6 @@ const App = () => {
                   </div>
                 </div>
               </div>
-
               <div className="row">
                 <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                   <div className="form-group my-form">
@@ -113,7 +123,6 @@ const App = () => {
                   </div>
                 </div>
               </div>
-
               <div className="row">
                 <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                   <div className="form-group my-form">
@@ -122,14 +131,12 @@ const App = () => {
                   </div>
                 </div>
               </div>
-
               <input
                 type="hidden"
                 name="rand_cupon"
                 value={randNumber}
                 readOnly
               />
-
               <div>
                 <div className="row">
                   <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
