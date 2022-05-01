@@ -2,7 +2,6 @@ import React, { useRef, useState, useEffect } from "react";
 import Zoom from "react-reveal/Zoom";
 import Fade from "react-reveal/Fade";
 import Flip from "react-reveal/Flip";
-import Slide from "react-reveal/Slide";
 import emailjs from "@emailjs/browser";
 import "bootstrap/dist/css/bootstrap.min.css";
 import logo from "./images/logo.png";
@@ -11,20 +10,34 @@ import load from "./images/load.gif";
 import "./App.css";
 
 const App = () => {
-  const [randNumber, setRandNumber] = useState(0);
+  //const [randNumber, setRandNumber] = useState(0);
   const [loading, setLoading] = useState(false);
   const [successMsg, setSuccessMsg] = useState(false);
   const form = useRef();
 
-  const getRandomNumber = () => {
-    const min = 1000;
-    const max = 10000;
-    const rand = Math.floor(Math.random() * (max - min + 1) + min);
-    setRandNumber(rand);
-  };
+  // const getRandomNumber = () => {
+  //   const min = 1000;
+  //   const max = 10000;
+  //   const rand = Math.floor(Math.random() * (max - min + 1) + min);
+  //   setRandNumber(rand);
+  // };
+
+  function makeid(length) {
+    var result = [];
+    var characters =
+      "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+    var charactersLength = characters.length;
+    for (var i = 0; i < length; i++) {
+      result.push(
+        characters.charAt(Math.floor(Math.random() * charactersLength))
+      );
+    }
+    return result.join("");
+  }
 
   useEffect(() => {
-    getRandomNumber();
+    //getRandomNumber();
+    makeid(7);
   }, []);
 
   const sendEmail = (e) => {
@@ -134,7 +147,7 @@ const App = () => {
               <input
                 type="hidden"
                 name="rand_cupon"
-                value={randNumber}
+                value={makeid(7)}
                 readOnly
               />
               <div>
