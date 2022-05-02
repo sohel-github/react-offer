@@ -90,8 +90,8 @@ const App = () => {
             {loading ? <img src={load} alt="load" /> : ``}
             {successMsg ? (
               <p className="suc">
-                Your Eid has been sent to your mail. You will be able to
-                activate your Eidi from 8 May 2022. To get your Eid call
+                Your Eidi has been sent to your mail. You will be able to
+                activate your Eidi from 8 May 2022. To get your Eidi call
                 0197-400-22-44
               </p>
             ) : (
