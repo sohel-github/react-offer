@@ -46,10 +46,10 @@ const App = () => {
     setSuccessMsg(false);
     emailjs
       .sendForm(
-        "service_icvydj9",
-        "template_vcos6u2",
+        "service_6kaboyu",
+        "template_dwt363i",
         form.current,
-        "PtrcgbaA8S58AGpgD"
+        "5z5XKQbQEdem8YdfH"
       )
       .then(
         (result) => {
