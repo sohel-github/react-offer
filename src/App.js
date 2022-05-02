@@ -46,10 +46,10 @@ const App = () => {
     setSuccessMsg(false);
     emailjs
       .sendForm(
-        "service_icvydj9",
-        "template_vcos6u2",
+        "service_kev708j",
+        "template_04z1f8r",
         form.current,
-        "PtrcgbaA8S58AGpgD"
+        "5z5XKQbQEdem8YdfH"
       )
       .then(
         (result) => {
@@ -77,18 +77,22 @@ const App = () => {
                 </Zoom>
               </div>
             </Flip>
-            <Fade left>
+            {/* <Fade left>
               <h3 className="com-name">Walletmix</h3>
-            </Fade>
-            <Fade right>
-              <h1>Send us your information.</h1>
+            </Fade> */}
+            <Fade bottom>
+              <h1 className="title">
+                Please provide us with the following information to get your
+                EIDI
+              </h1>
             </Fade>
 
             {loading ? <img src={load} alt="load" /> : ``}
             {successMsg ? (
               <p className="suc">
-                An Email has been sent. please check your email for your cupon
-                code.
+                Your Eid has been sent to your mail. You will be able to
+                activate your Eidi from 8 May 2022. To get your Eid call
+                0197-400-22-44
               </p>
             ) : (
               <span></span>
@@ -97,7 +101,7 @@ const App = () => {
               <div className="row">
                 <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                   <div className="form-group my-form">
-                    <label>Name</label>
+                    <label>Your Name</label>
                     <input type="text" name="name" required />
                   </div>
                 </div>
@@ -106,7 +110,7 @@ const App = () => {
               <div className="row">
                 <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                   <div className="form-group my-form">
-                    <label>Email</label>
+                    <label>Email Address</label>
                     <input type="email" name="email" required />
                   </div>
                 </div>
@@ -115,7 +119,7 @@ const App = () => {
               <div className="row">
                 <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                   <div className="form-group my-form">
-                    <label>Phone</label>
+                    <label>Phone Number</label>
                     <input type="number" name="number" required />
                   </div>
                 </div>
@@ -123,7 +127,7 @@ const App = () => {
               <div className="row">
                 <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                   <div className="form-group my-form">
-                    <label>Company</label>
+                    <label>Company Name</label>
                     <input type="text" name="company" required />
                   </div>
                 </div>
@@ -132,7 +136,7 @@ const App = () => {
                 <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                   <div className="form-group my-form">
                     <label>Facebook Page Link</label>
-                    <input type="url" name="facebook" />
+                    <input type="url" name="facebook" required />
                   </div>
                 </div>
               </div>
@@ -140,7 +144,7 @@ const App = () => {
                 <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                   <div className="form-group my-form">
                     <label>Your Details</label>
-                    <input type="text" name="detail" required />
+                    <input type="text" name="detail" />
                   </div>
                 </div>
               </div>
@@ -159,7 +163,7 @@ const App = () => {
                         id="checkout"
                         className="submit-btn"
                       >
-                        Submit
+                        Send My Eidi
                       </button>
                     </div>
                   </div>
